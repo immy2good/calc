@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css">
+    
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Javascript Calculator</title>
+    
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="calculator">
+        <form id="calc_form">
+          <div class="display">
+            <input type="text" id="display" value=""  name="display"  readonly/>
+          </div>
+          <div>
+            <input class="function-button"  type="button" id="clear" value="AC"   />
+            <input class="function-button" type="button" id="delete" value="DE" />
+            <input class="number-button" type="button" value="."  id="decimal" />
+            <input class="number-button" type="button" value="/"  id="divide" />
+          </div>
+          <div>
+            <input class="number-button" type="button" value="7" id="seven"  />
+            <input class="number-button" type="button" value="8" id="eight" />
+            <input class="number-button" type="button" value="9" id="nine" />
+            <input class="number-button" type="button" value="*" id="multiply" />
+          </div>
+          <div>
+            <input class="number-button" type="button" value="4" id="four" />
+            <input class="number-button" type="button" value="5" id="five" />
+            <input class="number-button" type="button" value="6" id="six" />
+            <input class="number-button" type="button" value="-" id="subtract" />
+          </div>
+          <div>
+            <input class="number-button" type="button" value="1" id="one" />
+            <input class="number-button" type="button" value="2" id="two" />
+            <input class="number-button" type="button" value="3" id="three" />
+            <input class="number-button" type="button" value="+" id="add" />
+          </div>
+          <div>
+            <input class="number-button" type="button" value="00"  />
+            <input class="number-button" type="button" value="0" id="zero"  />
+            <input  type="button" value="=" id="equals" class="equal"  />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="./index.js" > </script>
+
+
+    <!-- <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
+  </body>
+</html>
+
