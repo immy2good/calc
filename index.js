@@ -53,31 +53,54 @@ $(function () {
         console.log("Last Char : " + lastCharacter(displayValue));
         return; // Don't allow second minus)
       }
-      else if (buttonValue === "*" && lastCharacter(displayValue) === "-" && secondLastCharacter(displayValue) === "*") {
+
+      // 5*-  Solution for *
+      else if (
+        buttonValue === "*" &&
+        lastCharacter(displayValue) === "-" &&
+        secondLastCharacter(displayValue) === "*"
+      ) {
         console.log("this is display Value: " + displayValue);
         console.log("Last Char : " + lastCharacter(displayValue));
-        // displayValue += "this";// this is working 
+        // displayValue += "this";// this is working
         let withoutLastTwo = displayValue.slice(0, -2);
         console.log("without last 2 : " + withoutLastTwo);
+        displayValue = withoutLastTwo + buttonValue;
 
+        // 5*-  Solution for +
+      } else if (
+        buttonValue === "+" &&
+        lastCharacter(displayValue) === "-" &&
+        secondLastCharacter(displayValue) === "*"
+      ) {
+        // displayValue += "this";// this is working
+        let withoutLastTwo = displayValue.slice(0, -2);
+        console.log("without last 2 : " + withoutLastTwo);
+        displayValue = withoutLastTwo + buttonValue;
+      
+        // 5*-  Solution for /
+      } else if (
+        buttonValue === "/" &&
+        lastCharacter(displayValue) === "-" &&
+        secondLastCharacter(displayValue) === "*"
+      ) {
+        // displayValue += "this";// this is working
+        let withoutLastTwo = displayValue.slice(0, -2);
+        console.log("without last 2 : " + withoutLastTwo);
+        displayValue = withoutLastTwo + buttonValue;
 
-            } 
-
-      else if (
+        // Allow negative
+      } else if (
         isOperator(buttonValue) &&
         isOperator2(secondLastCharacter(displayValue)) &&
         lastCharacter(displayValue) === "-"
       ) {
         displayValue = displayValue + buttonValue; // Allow for negative numbers
         console.log("this is display Value: " + displayValue);
-        console.log(
-          "2nd Last Char : " + secondLastCharacter(displayValue)
-        );
+        console.log("2nd Last Char : " + secondLastCharacter(displayValue));
       } else {
         displayValue = displayValue.slice(0, -1) + buttonValue; // Replace the last operator
-        console.log(
-          "this is 2nd last:" + secondLastCharacter(displayValue)
-        );
+        console.log("this is 2nd last:" + secondLastCharacter(displayValue));
       }
     } else {
       if (displayValue === "0" && buttonValue !== ".") {
